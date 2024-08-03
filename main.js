@@ -5,3 +5,25 @@ var typed = new Typed(".text",{
     backDelay : 1000,
     loop : true
 });
+
+const form = document.querySelector('form');
+
+function sendEmail() {
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "aryansharma4427@gmail.com",
+        Password : "640491501A41FA2096EAF9614B32B51307E9",
+        To : 'aryansharma4427@gmail.com',
+        From : "aryansharma4427@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+        message => alert(message)
+    );
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    sendEmail();
+});
