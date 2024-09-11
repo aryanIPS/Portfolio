@@ -6,24 +6,34 @@ var typed = new Typed(".text",{
     loop : true
 });
 
-const form = document.querySelector('form');
+// const form = document.querySelector('form');
 
-function sendEmail() {
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "aryansharma4427@gmail.com",
-        Password : "640491501A41FA2096EAF9614B32B51307E9",
-        To : 'aryansharma4427@gmail.com',
-        From : "aryansharma4427@gmail.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
-    }).then(
-        message => alert(message)
-    );
-}
+// function sendEmail() {
+//     Email.send({
+//         Host : "smtp.elasticemail.com",
+//         Username : "aryansharma4427@gmail.com",
+//         Password : "640491501A41FA2096EAF9614B32B51307E9",
+//         To : 'aryansharma4427@gmail.com',
+//         From : "aryansharma4427@gmail.com",
+//         Subject : "This is the subject",
+//         Body : "And this is the body"
+//     }).then(
+//         message => alert(message)
+//     );
+// }
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault();
 
-    sendEmail();
-});
+//     sendEmail();
+// });
+
+<script>
+        document.addEventListener(
+              'DOMContentLoaded', () => {
+            document.getElementById('submitButton').
+                addEventListener('click', function () {
+                    alert('Form submitted!');
+                });
+            });
+</script>
