@@ -35,5 +35,5 @@ var typed = new Typed(".text",{
                 addEventListener('click', function () {
                     alert('Form submitted!');
                 });
-            });
+    });
 </script>
